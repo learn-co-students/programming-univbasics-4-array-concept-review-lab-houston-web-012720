@@ -15,13 +15,24 @@ end
 
 def find_max_value(array)
   # Add your solution here
- array.sort!
- array[-1]
- 
+  max = 0
+  
+array.length.times do |i|
+  if array[i] > max 
+    max = array[i]
+  end
+end
+max
+
 end
 
 def find_min_value(array)
   # Add your solution here
-  array.sort!
-  array[0]
+ min = array[0] 
+ array.length.times do |i|
+   if array[i] < min
+     min = array[i]
+   end
+ end
+   min
 end
